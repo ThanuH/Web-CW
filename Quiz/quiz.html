@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<script src="quiz.js"></script>
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <!--checkbox for responsiveness-->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <!-- <img class="logo" src="Images/logo-no-background.png" alt="logo"> -->
+            <!---menu item-->
+            <ul>
+                <li><a href="../Main_Page/main.html">Home</a></li>
+                <li><a href="../PresentationPage&Shop/Shop/shop.html">Shop</a></li>
+                <li><a href="../QueryForm&Navigation/query_form_and_details/queryForm.html">Query Form</a></li>
+                <li><a href="../AboutUs&Quiz/Quiz/Quiz.html">Quiz</a></li>
+                <li><a href="../Sitemap&Gallery/thumbnail2.html">Show Case</a></li>
+                <li><a href="../Sitemap&Gallery/SiteMap.html" class="selected">Site Map</a></li>
+                <li><a href="../AboutUs&Quiz/AboutUs/aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div id="quiz-container">
+            <h1>Quiz</h1>
+            <p>Click the "Start Quiz" button to begin.</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+            <div id="question-container" style="display: none;">
+                <p id="question"></p>
+                <div id="answer-buttons">
+                    <button class="btn" onclick="answerSelected(0)"></button>
+                    <button class="btn" onclick="answerSelected(1)"></button>
+                    <button class="btn" onclick="answerSelected(2)"></button>
+                    <button class="btn" onclick="answerSelected(3)"></button>
+                </div>
+                <div>
+                    <button id="skip-button" onclick="skipQuestion()">Skip</button>
+                    <button id="exit-button" onclick="endQuiz()">Exit</button>
+                </div>
+            </div>
+            <div id="score-container" style="display: none;">
+                <p>Your score is: <span id="score"></span></p>
+                <button onclick="restartQuiz()">Try Again</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
