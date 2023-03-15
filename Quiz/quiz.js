@@ -29,10 +29,11 @@ const questions = [
 	}
 ];
 
-// Variables
 let currentQuestion = 0;
 let score = 0;
 let timeLeft = 4;
+let questionCount = questions.length;
+let questionNumber = currentQuestion + 1;
 
 // Function to start the quiz
 function startQuiz() {
@@ -41,20 +42,22 @@ document.getElementById("question-container").style.display = "block";
 document.getElementsByTagName("button")[0].style.display = "none";
 // Display first question
 displayQuestion();
+startCountdown();
 }
 
 // Function to display a question and its answers
 function displayQuestion() {
-// Display question
-document.getElementById("question").textContent = questions[currentQuestion].question;
-// Display answer options
-for (let i = 0; i < 4; i++) {
-let answerButton = document.getElementsByClassName("btn")[i];
-answerButton.textContent = questions[currentQuestion].answers[i].text;
-}
-// Start countdown
-startCountdown();
-}
+	// Display question
+	document.getElementById("question").textContent = questions[currentQuestion].question;
+	// Display answer options
+	for (let i = 0; i < 4; i++) {
+	  let answerButton = document.getElementsByClassName("btn")[i];
+	  answerButton.textContent = questions[currentQuestion].answers[i].text;
+	}
+	// Display current question number and total number of questions
+	document.getElementById("question-number").textContent = `Question ${questionNumber} of ${questionCount}`;
+  }
+  
 
 // Function to start countdown
 function startCountdown() {
@@ -86,13 +89,20 @@ skipQuestion();
 
 // Function to skip to next question
 function skipQuestion() {
-// Go to next question or end quiz if all questions have been answered
-if (currentQuestion < questions.length - 1) {
-currentQuestion++;
-displayQuestion();
-} else {
-endQuiz();
-}
+  // Go to next question or end quiz if all questions have been answered
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    questionNumber++;
+    displayQuestion();
+    startCountdown();
+  } else {
+    endQuiz();
+  }
+  
+  // Reset time if there are no more questions
+  if (currentQuestion >= questions.length) {
+    timeLeft = 4;
+  }
 }
 
 // Function to end the quiz and display score
@@ -110,7 +120,25 @@ function restartQuiz() {
 currentQuestion = 0;
 score = 0;
 timeLeft = 4;
+questionNumber = currentQuestion + 1;
 // Hide score container and show start button
 document.getElementById("score-container").style.display = "none";
 document.getElementsByTagName("button")[0].style.display = "block";
+}
+
+// Function to show info box
+function showInfoBox() {
+document.getElementById("info-box").style.display = "block";
+}
+
+// Function to hide info box
+function hideInfoBox() {
+document.getElementById("info-box").style.display = "none";
+}
+
+// Function to continue to quiz from info box
+function continueToQuiz() {
+hideInfoBox();
+startQuiz();
+startCountdown();
 }
