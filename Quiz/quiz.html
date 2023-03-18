@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="quizstyle.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+</head>
+<body>
+    <nav>
+        <!--checkbox for responsiveness-->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <!-- <img class="logo" src="Images/logo-no-background.png" alt="logo"> -->
+        <!---menu item-->
+        <ul>
+            <li><a href="../Main_Page/main.html">Home</a></li>
+            <li><a href="../PresentationPage&Shop/Shop/shop.html">Shop</a></li>
+            <li><a href="../QueryForm&Navigation/query_form_and_details/queryForm.html">Query Form</a></li>
+            <li><a href="../AboutUs&Quiz/Quiz/Quiz.html">Quiz</a></li>
+            <li><a href="../Sitemap&Gallery/thumbnail2.html">Show Case</a></li>
+            <li><a href="../Sitemap&Gallery/SiteMap.html" class="selected">Site Map</a></li>
+            <li><a href="../AboutUs&Quiz/AboutUs/aboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+
+	<div class="container">
+		<h1>Quiz</h1>
+		<button onclick="startQuiz()">Start</button>
+		<div id="question-container" style="display:none;">
+			<div id="question-number"></div>
+			<div id="question"></div>
+			<div id="timer"></div>
+			<div id="answer-buttons">
+				<button class="btn" onclick="answerSelected(0)"></button>
+				<button class="btn" onclick="answerSelected(1)"></button>
+				<button class="btn" onclick="answerSelected(2)"></button>
+				<button class="btn" onclick="answerSelected(3)"></button>
+			</div>
+		</div>
+		<div id="score-container" style="display:none;">
+			<div id="score"></div>
+			<button onclick="restartQuiz()">Restart</button>
+		</div>
+		<div id="info-box" style="display:none;">
+			<h2>Welcome to the Quiz!</h2>
+			<p>Answer each question before time runs out.</p>
+			<button onclick="continueToQuiz()">Continue</button>
+		</div>
+	</div>
+
+	<script src="quiz.js"></script>
+
+</body>
+</html>
