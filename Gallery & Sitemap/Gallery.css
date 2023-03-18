@@ -70,7 +70,7 @@ body {
     display: inline-flex;
     justify-content: left;
     align-items: left;
-    width: 1200px;
+    width: 200px;
     flex-direction: column;
     margin: 1px auto;
     padding: 0 3px;
