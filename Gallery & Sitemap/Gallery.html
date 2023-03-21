@@ -1,99 +1,81 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="images/icon.png">
-    <title>ShowCase</title>
-    <link rel="stylesheet" href="Gallery.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="footer.css">
-</head>
-
-<body>
-    <p id="demo"></p>
-    <!--student 2 navigation bar starts-->
-    <nav>
-        <!--checkbox for responsiveness-->
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
-        <img class="logo" src="images/logo-no-background.png" alt="logo">
-        <!--menu item-->
-        <ul>
-            <li><a href="../Main_Page/main.html">Home</a></li>
-            <li><a href="../PresentationPage&Shop/Shop/shop.html">Shop</a></li>
-            <li><a href="../QueryForm&Navigation/query_form_and_details/queryForm.html">Query Form</a></li>
-            <li><a href="../AboutUs&Quiz/Quiz/Quiz.html">Quiz</a></li>
-            <li><a href="../Sitemap&Gallery/thumbnail2.html" class="selected">Show Case</a></li>
-            <li><a href="../Sitemap&Gallery/SiteMap.html">Site Map</a></li>
-            <li><a href="../AboutUs&Quiz/AboutUs/aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/icon.png">
+        <title>Gallery</title>
+        <link rel="stylesheet" href="Gallery.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+    </head>
+    <body>
+        <p id="demo"></p>
+     <!--navigation bar starts-->
+        <nav>
+    <!--checkbox for responsiveness-->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img class="logo" src="images/logo-no-background.png" alt="logo">
+    <!--menu item-->
+             <ul>
+                <li><a href="../Main_Page/main.html">Home</a></li>
+                <li><a href="../PresentationPage&Shop/Shop/shop.html">Shop</a></li>
+                <li><a href="../QueryForm&Navigation/query_form_and_details/queryForm.html">Query Form</a></li>
+                <li><a href="../AboutUs&Quiz/Quiz/Quiz.html">Quiz</a></li>
+                <li><a href="../Sitemap&Gallery/thumbnail2.html" class="selected">Show Case</a></li>
+                <li><a href="../Sitemap&Gallery/SiteMap.html">Site Map</a></li>
+                <li><a href="../AboutUs&Quiz/AboutUs/aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
     <form>
         <span style="font-family: poppins;font-size:1.2em;">
-
-                        Background
-                        <select style="font-family:poppins; border-radius:20px; color:white;background-color:black;" onchange="pagecolor(this.value)">
-                        <option  value="">By Default</option>
-                        <option value="black">Black</option>
-                        <option value="#fff">White</option>
-                        <option value="#75bff0">Blue</option>
-                        <option value="#cea9cf">Pink</option>
-                        
-                        
-                        </select>
-
-                        <button id="btn" onclick="CreateRGB()">Random</button>
-                        
-                        <div class="container">
-                            <div class="buttons">
-                                <span class="btn active" onclick="document.getElementById('zoom in').style.fontSize='1em'">A</span>
-        <span class="btn" onclick="document.getElementById('zoom in').style.fontSize='1.5em'">A</span>
-        <span class="btn" onclick="document.getElementById('zoom in').style.fontSize='2em'">A</span>
-        </div>
-        </div>
-
+             Background
+            <select style="font-family:poppins; border-radius:20px; color:white;background-color:black;" onchange="pagecolor(this.value)">
+                <option  value="">By Default</option>
+                <option value="black">Black</option>
+                <option value="#fff">White</option>
+                 <option value="#75bff0">Blue</option>
+                 <option value="#cea9cf">Pink</option>
+              </select>
+              Random Button
+            <button id="btn" onclick="CreateRGB()">Random</button>            
+                 <div class="container">
+                        <div class="buttons">
+                            <span class="btn active" onclick="document.getElementById('zoom in').style.fontSize='1em'">A</span>
+                            <span class="btn" onclick="document.getElementById('zoom in').style.fontSize='1.5em'">A</span>
+                            <span class="btn" onclick="document.getElementById('zoom in').style.fontSize='2em'">A</span>
+                        </div>
+                 </div>
+        </span>
     </form>
-    </span>
-
-
-    <div id="zoom in">
-        <img id="0" class="view" src="images/image1.jpg"><br>
-        <span id="description">Pain<br><p1>Pain (typeset as PAIN) is a musical project from Sweden that mixes heavy metal with 
+     <!-- Gallery Starts  -->
+            <div id="zoom in">
+                <img id="0" class="view" src="images/image1.jpg"><br>
+                <span id="description">Pain<br><p1>Pain (typeset as PAIN) is a musical project from Sweden that mixes heavy metal with 
                                 influences from electronic music and techno. The project started out as a hobby project for frontman Peter Tägtgren, whose idea was 
                                 to fuse heavy metal with 1980s-inspired electro-industrial and techno influences. Tägtgren, who is also the vocalist/guitarist of 
                                 Hypocrisy and producer of his own The Abyss studios, is the only current member.</p1>
-                            </span>
-    </div>
-
+                 </span>
+            </div>
     <br><br>
+            <div id="all_gallery_photos">
+                 <img id="1" class="gallery image active" src="images/image1.jpg" onmouseover="view(this)" onmouseenter="description_Pain()" />
 
-    <div id="all_gallery_photos">
+                <img id="2" class="gallery image" src="images/image2.jpg" onmouseover="view(this)" onmouseenter="description_Celestial()" />
 
-        <img id="1" class="gallery image active" src="images/image1.jpg" onmouseover="view(this)" onmouseenter="description_Pain()" />
+                <img id="3" class="gallery image" src="images/image3.jpg" onmouseover="view(this)" onmouseenter="description_Ophelia()" />
 
-        <img id="2" class="gallery image" src="images/image2.jpg" onmouseover="view(this)" onmouseenter="description_Celestial()" />
+                <img id="4" class="gallery image" src="images/image4.jpg" onmouseover="view(this)" onmouseenter="description_Havana()" />
 
-        <img id="3" class="gallery image" src="images/image3.jpg" onmouseover="view(this)" onmouseenter="description_Ophelia()" />
-
-        <img id="4" class="gallery image" src="images/image4.jpg" onmouseover="view(this)" onmouseenter="description_Havana()" />
-
-        <img id="5" class="gallery image" src="images/image5.jpeg" onmouseover="view(this)" onmouseenter="description_Adele_21()" />
-
-    </div>
-
+                <img id="5" class="gallery image" src="images/image5.jpeg" onmouseover="view(this)" onmouseenter="description_Adele_21()" />
+             </div>
     <footer>
-
         <h2>Page Editor</h2>
         <a id="name" href="Shanuka_Pageeditor.html">Shanuka Himsara</a>
         <p>©2023 Ghetto Play | All Rights Reserved</p>
-
     </footer>
-
-    <script type="text/javascript" src="Gallery.js">
-    </script>
-</body>
-
+        <script type="text/javascript" src="Gallery.js"></script>
+    </body>
 </html>
