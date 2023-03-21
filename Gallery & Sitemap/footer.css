@@ -21,16 +21,11 @@ footer .menu
 	align-items:center;
 	margin:0.694vw 0;
 	flex-wrap:wrap;
-
-
-	
 }
 
 footer h2{
 	color:white;
 }
-
-
 
 footer p
 {
@@ -46,8 +41,6 @@ footer p
 	color: white;
 	transition: 0.8s;
 }
-
-
 
 #name:hover {
 	color: #00FF00;
