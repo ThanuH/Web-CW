@@ -4,16 +4,16 @@
 }
 
 .view {
-    height: 500px;
-    width: 500px;
+    height: 34.698vw;
+    width: 34.698vw;
     opacity: inherit;
-    margin-left: 500px;
+    margin-left: 34.698vw;
 }
 
 .gallery {
-    height: 130px;
-    width: 130px;
-    margin-left: 120px;
+    height: 9.022vw;
+    width: 9.022vw;
+    margin-left: 8.328vw;
     opacity: 0.5;
     background-color: black;
     border-radius: 50%;
@@ -24,23 +24,23 @@
 }
 
 p1 {
-    margin-left: 100px;
+    margin-left: 6.94vw;
 }
 
 p2 {
-    margin-left: 100px;
+    margin-left: 6.94vw;
 }
 
 p3 {
-    margin-left: 150px;
+    margin-left: 10.409vw;
 }
 
 p4 {
-    margin-left: 100px;
+    margin-left: 6.94vw;
 }
 
 p5 {
-    margin-left: 100px;
+    margin-left: 6.94vw;
 }
 
 p1,
@@ -55,7 +55,7 @@ p5 {
     color: white;
     padding-left: 675px;
     font-size: 1.8em;
-    font-weight: 100px;
+    font-weight: 6.94vw;
 }
 
 body {
@@ -70,10 +70,10 @@ body {
     display: inline-flex;
     justify-content: left;
     align-items: left;
-    width: 200px;
+    width: 13.879vw;
     flex-direction: column;
-    margin: 1px auto;
-    padding: 0 3px;
+    margin: 0.069vw auto;
+    padding: 0 0.208vw;
 }
 
 .container .buttons {
@@ -81,15 +81,15 @@ body {
     display: flex;
     justify-content: flex;
     align-items: flex-end;
-    margin-bottom: 18px;
+    margin-bottom: 1.249vw;
 }
 
 .container .buttons .btn {
-    padding: 0 2px;
+    padding: 0 0.139vw;
     display: inline-flex;
     background: black;
     color: #fff;
-    margin-left: 1px;
+    margin-left: 0.069vw;
     cursor: pointer;
 }
 
@@ -110,12 +110,12 @@ button {
 }
 
 #btn {
-    padding: 3px;
+    padding: 0.208vw;
     font-family: "Helvetica", sans-serif;
-    font-size: 20px;
-    border-radius: 10px;
+    font-size: 1.388vw;
+    border-radius: 0.694vw;
     background-color: transparent;
-    border: 2px solid white;
+    border: 0.139vw solid white;
     color: white;
     outline: none;
 }

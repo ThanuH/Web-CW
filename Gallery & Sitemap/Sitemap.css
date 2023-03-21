@@ -13,18 +13,18 @@
     fill: white;
     color: white;
     stroke: url(#rectangle_color);
-    stroke-width: 4px;
+    stroke-width: 0.278vw;
 }
 
 .svg_rect {
     fill: url(#rectangle_color);
     stroke: white;
-    stroke-width: 4px;
+    stroke-width: 0.278vw;
 }
 
 .svg_lines {
     stroke: white;
-    stroke-width: 4px;
+    stroke-width: 0.278vw;
 }
 
 .svg_editors {

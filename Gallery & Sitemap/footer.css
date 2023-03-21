@@ -3,10 +3,10 @@ footer{
 	position:relative;
 	width:100%;
 	background:#398989;
-	min-height:100px;
-	padding:20px 50px;
+	min-height:6.94vw;
+	padding:1.388vw 3.47vw;
 	display:flex;
-	top:150px;
+	top:10.409vw;
 	justify-content:center;
 	align-items:center;
 	flex-direction:column;
@@ -19,7 +19,7 @@ footer .menu
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	margin:10px 0;
+	margin:0.694vw 0;
 	flex-wrap:wrap;
 
 
@@ -36,8 +36,8 @@ footer p
 {
 	color:#fff;
 	text-align:center;
-	margin-top:15px;
-	margin-bottom:10px;
+	margin-top:1.041vw;
+	margin-bottom:0.694vw;
 	font-size:1.1em;
 	margin-left:0vw;
 }
