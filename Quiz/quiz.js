@@ -31,19 +31,19 @@ const questions = [
 
 let currentQuestion = 0;
 let score = 0;
-let timeLeft = 4;
+let timeLeft = 10;
 let questionCount = questions.length;
 let questionNumber = currentQuestion + 1;
 
 // Function to start the quiz
 function startQuiz() {
-// Hide start button and show question container
-document.getElementById("question-container").style.display = "block";
-document.getElementsByTagName("button")[0].style.display = "none";
-// Display first question
-displayQuestion();
-startCountdown();
-}
+	// Hide start button and show question container
+	document.getElementById("question-container").style.display = "block";
+	document.getElementsByTagName("button")[0].style.display = "none";
+	// Display first question
+	displayQuestion();
+	startCountdown();
+	}
 
 // Function to display a question and its answers
 function displayQuestion() {
@@ -61,30 +61,30 @@ function displayQuestion() {
 
 // Function to start countdown
 function startCountdown() {
-// Display time left
-document.getElementById("timer").textContent = timeLeft;
-// Decrease time left every second
-let countdown = setInterval(function() {
-timeLeft--;
-document.getElementById("timer").textContent = timeLeft;
-// Skip to next question if time is up
-if (timeLeft <= 0) {
-clearInterval(countdown);
-timeLeft = 4;
-skipQuestion();
-}
-}, 1000);
-}
+	// Display time left
+	document.getElementById("timer").textContent = timeLeft;
+	// Decrease time left every second
+	let countdown = setInterval(function() {
+		timeLeft--;
+		document.getElementById("timer").textContent = timeLeft;
+	// Skip to next question if time is up
+	if (timeLeft == 0) {
+		clearInterval(countdown);
+		timeLeft = 10;
+		skipQuestion();
+		}
+	}, 1000);
+}	
 
 // Function to handle answer selection
 function answerSelected(answerIndex) {
-// Increase score if answer is correct
-if (questions[currentQuestion].answers[answerIndex].correct) {
-score++;
-}
-// Skip to next question
-timeLeft = 4;
-skipQuestion();
+	// Increase score if answer is correct
+	if (questions[currentQuestion].answers[answerIndex].correct) {
+		score++;
+	}
+	// Skip to next question
+	timeLeft = 10;
+	skipQuestion();
 }
 
 // Function to skip to next question
@@ -98,10 +98,10 @@ function skipQuestion() {
   } else {
     endQuiz();
   }
-  
+
   // Reset time if there are no more questions
   if (currentQuestion >= questions.length) {
-    timeLeft = 4;
+    timeLeft = 10;
   }
 }
 
@@ -116,29 +116,42 @@ document.getElementById("score").textContent = score + "/" + questions.length;
 
 // Function to restart the quiz
 function restartQuiz() {
-// Reset variables
-currentQuestion = 0;
-score = 0;
-timeLeft = 4;
-questionNumber = currentQuestion + 1;
-// Hide score container and show start button
-document.getElementById("score-container").style.display = "none";
-document.getElementsByTagName("button")[0].style.display = "block";
+	// Reset variables
+	currentQuestion = 0;
+	score = 0;
+	timeLeft = 10;
+	questionNumber = currentQuestion + 1;
+	// Hide score container and show start button
+	document.getElementById("score-container").style.display = "none";
+	document.getElementsByTagName("button")[0].style.display = "block";
 }
 
 // Function to show info box
 function showInfoBox() {
-document.getElementById("info-box").style.display = "block";
+	document.getElementById("info-box").style.display = "block";
 }
 
 // Function to hide info box
 function hideInfoBox() {
-document.getElementById("info-box").style.display = "none";
+	document.getElementById("info-box").style.display = "none";
 }
 
 // Function to continue to quiz from info box
 function continueToQuiz() {
-hideInfoBox();
-startQuiz();
-startCountdown();
+	hideInfoBox();
+	startQuiz();
+	startCountdown();
 }
+
+
+// var count = 15;
+// var interval = setInterval(function(){
+//   document.getElementById('count').innerHTML=count;
+//   count--;
+//   if (count === 0){
+//     clearInterval(interval);
+//     document.getElementById('count').innerHTML='Done';
+//     // or...
+//     alert("You're out of time!");
+//   }
+// }, 1000);
