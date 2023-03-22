@@ -2,7 +2,7 @@
 footer{
 	position:relative;
 	width:100%;
-	background:#398989;
+	background:#D22B2B;
 	min-height:6.94vw;
 	padding:1.388vw 3.47vw;
 	display:flex;
@@ -19,7 +19,7 @@ footer .menu
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	margin:0.694vw 0;
+	margin:0.694vw 0vw;
 	flex-wrap:wrap;
 }
 
