@@ -38,7 +38,6 @@ function pagecolor(color) {
     document.body.style.background = color;
 }
 
-
 function CreateRGB() {
     var red = Math.floor(Math.random() * 256);
     var green = Math.floor(Math.random() * 256);
@@ -48,7 +47,7 @@ function CreateRGB() {
     localStorage.setItem("bg-color", rgbValue);
 }
 
-
-if (localStorage.getItem("bg-color")) {
-    document.body.style.background = localStorage.getItem("bg-color");
+if (localStorage.getItem(color)) {
+    document.body.style.background = localStorage.getItem(color);
 }
+
