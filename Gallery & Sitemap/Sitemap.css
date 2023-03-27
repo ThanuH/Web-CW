@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
+
+.svg_sections {
+    font-family: poppins;
+    font-size: 1.5em;
+    fill: white;
+}
+
+.svg_ellipse {
+    fill: white;
+    color: white;
+    stroke: url(#rectangle_color);
+    stroke-width: 0.278vw;
+}
+
+.svg_rect {
+    fill: url(#rectangle_color);
+    stroke: white;
+    stroke-width: 0.278vw;
+}
+
+.svg_lines {
+    stroke: white;
+    stroke-width: 0.278vw;
+}
+
+.svg_editors {
+    fill: white;
+}
+
+.sitemap {
+    /* fill: linear-gradient(white); */
+    fill: whitesmoke;
+    font-size: 2.0em;
+    font-family: poppins;
+}
+
+body {
+    background-image: url("images/band-tenside.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: poppins;
+}

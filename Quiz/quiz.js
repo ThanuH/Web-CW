@@ -193,10 +193,12 @@ function restartQuiz() {
 // Function to show info box
 function showInfoBox() {
 	document.getElementById("info-box").style.display = "block";
+	document.getElementById("info-box").style.display = "block";
 }
 
 // Function to hide info box
 function hideInfoBox() {
+	document.getElementById("info-box").style.display = "none";
 	document.getElementById("info-box").style.display = "none";
 }
 
@@ -205,4 +207,20 @@ function continueToQuiz() {
 	hideInfoBox();
 	startQuiz();
 	startCountdown();
+	hideInfoBox();
+	startQuiz();
+	startCountdown();
 }
+
+
+// var count = 15;
+// var interval = setInterval(function(){
+//   document.getElementById('count').innerHTML=count;
+//   count--;
+//   if (count === 0){
+//     clearInterval(interval);
+//     document.getElementById('count').innerHTML='Done';
+//     // or...
+//     alert("You're out of time!");
+//   }
+// }, 1000);

@@ -38,7 +38,16 @@ function pagecolor(color) {
     document.body.style.background = color;
 }
 
-function textcolor(color) {
-    document.getElementById("description").style.color = color;
-    document.body.style.color = color;
+function CreateRGB() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var rgbValue = "rgb(" + red + "," + green + "," + blue + ")";
+    document.body.style.background = rgbValue;
+    localStorage.setItem("bg-color", rgbValue);
 }
+
+if (localStorage.getItem(color)) {
+    document.body.style.background = localStorage.getItem(color);
+}
+

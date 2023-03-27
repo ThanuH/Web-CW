@@ -1,0 +1,98 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url(./Image\ Assets/mainD.jpg);
+    background-repeat: cover;
+    background-position: center;
+}
+
+/* Main Text Css */
+
+.mainTxt{
+    color: #ffff;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+
+.mainTxt p{
+    font-size:  3.2552083vw;
+    font-weight: 600;
+}
+
+.mainTxt h1{
+    font-size: 12.3697916vw;
+    line-height: 160px;
+    margin-left: -10px;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #ffff;
+    background: url("./Image\ Assets/1.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.mainTxt h3{
+    font-size: 2.604166vw;
+    font-weight: 500;
+}
+
+.mainTxt .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+ 
+.mainTxt a{
+    color: #ffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #ffff;
+}
+
+/* Card Layout */
+.click {
+    padding: 5px 5px;
+    align-items: center;
+  }
+  .card {
+    width: 300px;
+    height: 630px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 2px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+  }
+  .card1 {
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+    background-image: url(rap.png);
+  }
+  
+  .bottom{
+    background-image: url(bottom.jpg);
+  }
