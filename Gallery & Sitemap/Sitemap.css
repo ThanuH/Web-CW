@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
-<<<<<<< Updated upstream
-
-=======
-* {
-    cursor: url('images/mouse.png'), auto;
-}
->>>>>>> Stashed changes
 /* /hover add/ */
 .svg_sections {
     font-family: poppins;
@@ -42,17 +35,6 @@ h2 {
     font-family: poppins;
 }
 
-<<<<<<< Updated upstream
-
-=======
-/*------------------------ pk.css-----------------------
-h2:hover{
-    stroke: #000000;
-    transition: 0.5s ease;
-
-}
-*/
->>>>>>> Stashed changes
 svg g rect {
     stroke: rgb(244, 244, 244);
     stroke-width: 2px;    
@@ -62,18 +44,10 @@ svg g text {
     font-weight: 540;
 }   
 svg g a:hover rect{    
-<<<<<<< Updated upstream
     stroke: #FFFF00;
     transition: 0.5s ease;
 }
 svg g a:hover text {    
     fill: #ffffff;
-=======
-    stroke: #000000;
-    transition: 0.5s ease;
-}
-svg g a:hover text {    
-    fill: #000000;
->>>>>>> Stashed changes
     transition: 0.5s ease;
 }
