@@ -1,36 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
-
+/* /hover add/ */
 .svg_sections {
     font-family: poppins;
     font-size: 1.5em;
-    fill: white;
 }
 
-.svg_ellipse {
-    fill: white;
-    color: white;
-    stroke: url(#rectangle_color);
-    stroke-width: 0.278vw;
-}
-
+/* /hover add frame/ */
 .svg_rect {
     fill: url(#rectangle_color);
-    stroke: white;
     stroke-width: 0.278vw;
 }
 
 .svg_lines {
-    stroke: white;
+    stroke: rgb(255,255,255);
     stroke-width: 0.278vw;
 }
 
-.svg_editors {
-    fill: white;
-}
-
 .sitemap {
-    /* fill: linear-gradient(white); */
-    fill: whitesmoke;
+    /* fill: linear-gradient(white);SItemap */
+    fill: rgb(255, 0, 195);
     font-size: 2.0em;
     font-family: poppins;
 }
@@ -42,7 +30,24 @@ body {
 }
 
 h2 {
-    color: white;
+    stroke: rgb(255, 0, 0);
     text-align: center;
     font-family: poppins;
+}
+
+svg g rect {
+    stroke: rgb(244, 244, 244);
+    stroke-width: 2px;    
+}
+svg g text {
+    fill: rgb(255, 255, 255);
+    font-weight: 540;
+}   
+svg g a:hover rect{    
+    stroke: #FFFF00;
+    transition: 0.5s ease;
+}
+svg g a:hover text {    
+    fill: #ffffff;
+    transition: 0.5s ease;
 }
