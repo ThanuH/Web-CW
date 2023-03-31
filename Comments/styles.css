@@ -1,20 +1,35 @@
 body {
-    background: linear-gradient(black, #9FE2BF, white);
+    background: linear-gradient(to bottom right, #5f2c82, #49a09d);
+    color: rgb(0, 0, 0);
+    font-family: poppins;
 }
-
-.feedback-form {
-    width: 900px;
-    height: 950px;
-    background: #f2efff;
-    margin-top: 5%;
-    margin-bottom: 17%;
-    border-radius: 30px;
-
-}
-
-.box {
-    width: 400px;
-}
+/* Style for form container */
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for form fields */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
 .rating {
     position: relative;
@@ -33,15 +48,15 @@ body {
 .rating label {
     display: block;
     cursor: pointer;
-    width: 50px;
-    height: 40px;
+    width: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
     background-color: #fff;
     color: #000;
-    font-size: 20px;
+    font-size: 15px;
     border-right: 1px solid #000;
 }
 
@@ -50,160 +65,14 @@ input[type="radio"]:checked~label {
     background: transparent;
 }
 
-.feedback-form .form-control {
-    border-radius: 1rem;
-}
-
-.feedback-form form {
-    padding: 15%;
-}
-
-.feedback-form form .row {
-    margin-bottom: 0%;
-}
-
-.feedback-form h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 8%;
-    margin-top: -10%;
-    text-align: center;
-    color: #0000ff;
-}
-
 #submit-feedback {
+    font-size: medium;
     width: 140px;
     border: none;
-    border-radius: 30px;
-    padding: 7px;
+    border-radius: 20px;
+    padding: 10px;
     background: #dc3545;
-    font-weight: 600;
+    font-weight:bold;
     color: #fff;
     cursor: pointer;
 }
-
-.feedback-form .p {
-    margin-top: 10%;
-    margin-bottom: 3px;
-    color: grey;
-}
-
-.popup {
-    width: 350px;
-    height: 500px;
-    background: #d9ceff;
-    border-radius: 20px;
-    position: absolute;
-    top: 80%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    padding: 0 40px 30px;
-    color: #333;
-    visibility: visible;
-    transition: transform 0.4s, top 0.4s;
-}
-
-.popup h2 {
-    font-size: 23px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* *{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-}
-
-body{
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    place-items: center;
-}
-
-h1{
-    margin-bottom: 2rem;
-
-}
-form{
-    display: flex;
-    flex-direction: column;
-    width: 24rem;
-    gap: 1rem;
-}
-
-.rating {
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 10px;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    background: linear-gradient(to right, #f00, #ff0, #0f0);
-  }
-  
-  .rating input {
-    display: none;
-  }
-  
-  .rating label {
-    display: block;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    background-color: #fff;
-    color: #000;
-    font-size: 20px;
-    border-right: 1px solid #000;
-  }
-  
-  .rating input[type="radio"]:hover ~ label,
-  input[type="radio"]:checked ~ label {
-    background: transparent;
-  }
-  
-input,textarea{
-    padding: 1.4rem;
-    background: transparent;
-    border: 1px solid black;
-}
-
-.popup{
-    width: 400px;
-    height: 500px;
-    background: #d9ceff;
-    border-radius: 20px;
-    position: absolute;
-    top: 80%;
-    left: 68%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    padding: 0 40px 30px;
-    color: #333;
-    visibility: visible;
-    transition: transform 0.4s, top 0.4s;
-  } */
