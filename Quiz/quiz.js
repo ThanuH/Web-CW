@@ -1,226 +1,184 @@
-// Questions and answers
-const questions = [
-	{
-		question: "Who is considered the 'King of Pop'?",
-		answers: [
-			{ text: "Michael Jackson", correct: true },
-			{ text: "Elvis Presley", correct: false },
-			{ text: "Prince", correct: false },
-			{ text: "Madonna", correct: false }
-		]
-	},
-	{
-		question: "What is the highest-selling album of all time?",
-		answers: [
-			{ text: "Thriller by Michael Jackson", correct: true },
-			{ text: "The Eagles Greatest Hits", correct: false },
-			{ text: "Back in Black by AC/DC", correct: false },
-			{ text: "The Dark Side of the Moon by Pink Floyd", correct: false }
-		]
-	},
-	{
-		question: "What is the name of the lead singer of the Rolling Stones?",
-		answers: [
-			{ text: "Paul McCartney", correct: false },
-			{ text: "Keith Richards", correct: false },
-			{ text: "Mick Jagger", correct: true },
-			{ text: "Ringo Starr", correct: false }
-		]
-	},
-	{
-		question: "Who wrote the song 'Bohemian Rhapsody'?",
-		answers: [
-			{ text: "Freddie Mercury", correct: true },
-			{ text: "Elton John", correct: false },
-			{ text: "Paul McCartney", correct: false },
-			{ text: "Mick Jagger", correct: false }
-		]
-	},
-	{
-		question: "What is the name of the musical film that features songs by ABBA?",
-		answers: [
-			{ text: "Moulin Rouge!", correct: false },
-			{ text: "Grease", correct: false },
-			{ text: "Mamma Mia!", correct: true },
-			{ text: "La La Land", correct: false }
-		]
-	},
-	{
-		question: "Who is known as the 'Queen of Soul'?",
-		answers: [
-			{ text: "Etta James", correct: false },
-			{ text: "Aretha Franklin", correct: true },
-			{ text: "Whitney Houston", correct: false },
-			{ text: "Tina Turner", correct: false }
-		]
-	},
-	{
-		question: "What is the name of the lead singer of the band U2?",
-		answers: [
-			{ text: "Bono", correct: true },
-			{ text: "The Edge", correct: false },
-			{ text: "Adam Clayton", correct: false },
-			{ text: "Larry Mullen Jr.", correct: false }
-		]
-	},
-	{
-		question: "What is the name of the guitar legend known for his hit song 'Purple Haze'?",
-		answers: [
-			{ text: "Eric Clapton", correct: false },
-			{ text: "Jimi Hendrix", correct: true },
-			{ text: "Jimmy Page", correct: false },
-			{ text: "Eddie Van Halen", correct: false }
-		]
-	},
-	{
-		question: "What is the name of the music festival held annually in the desert of California?",
-		answers: [
-			{ text: "Coachella", correct: true },
-			{ text: "Bonnaroo", correct: false },
-			{ text: "Lollapalooza", correct: false },
-			{ text: "Glastonbury", correct: false }
-		]
-	},
-	{
-		question: "Who is the best-selling female artist of all time?",
-		answers: [
-			{ text: "Whitney Houston", correct: false },
-			{ text: "Madonna", correct: false },
-			{ text: "Mariah Carey", correct: true },
-			{ text: "Celine Dion", correct: false }
-		]
-	},
-];
+window.onload = function() {
+	// get HTML elements
+	var infoBox = document.getElementById("infoBox");
+	var quizBox = document.getElementById("quizBox");
+	var resultBox = document.getElementById("resultBox");
+  var timerDisplay = document.getElementById("timer");
+	var questionDisplay = document.getElementById("question");
+	var optionsDisplay = document.getElementById("options");
+	var scoreDisplay = document.getElementById("score");
+	var startBtn = document.getElementById("startBtn");
+	var restartBtn = document.getElementById("restartBtn");
 
-let currentQuestion = 0;
-let score = 0;
-let timeLeft = 5;
-let questionCount = questions.length;
-let questionNumber = currentQuestion + 1;
+	// set timer interval
+	var timerInterval;
 
-// Function to start the quiz
-function startQuiz() {
-	// Hide start button and show question container
-	document.getElementById("question-container").style.display = "block";
-	document.getElementsByTagName("button")[0].style.display = "none";
-	// Display first question
-	displayQuestion();
-	startCountdown();
-}
+	// set initial score to 0
+	var score = 0;
 
-// Function to display a question and its answers
-function displayQuestion() {
-	// Display question
-	document.getElementById("question").textContent = questions[currentQuestion].question;
-	// Display answer options
-	for (let i = 0; i < 4; i++) {
-		let answerButton = document.getElementsByClassName("btn")[i];
-		answerButton.textContent = questions[currentQuestion].answers[i].text;
-	}
-	// Display current question number and total number of questions
-	document.getElementById("question-number").textContent = `Question ${questionNumber} of ${questionCount}`;
-}
-
-
-// Function to start countdown
-function startCountdown() {
-	// Display time left
-	document.getElementById("timer").textContent = timeLeft;
-	// Decrease time left every second
-	let countdown = setInterval(function () {
-		timeLeft--;
-		document.getElementById("timer").textContent = timeLeft;
-		// Skip to next question if time is up
-		if (timeLeft <= 0) {
-			clearInterval(countdown);
-			timeLeft = 5;
-			skipQuestion();
+	// define questions
+	var questions = [
+		{
+			question: "What is the capital of France?",
+			options: ["London", "Paris", "Madrid", "Rome"],
+			answer: 1
+		},
+		{
+			question: "What is the largest planet in our solar system?",
+			options: ["Jupiter", "Saturn", "Mars", "Venus"],
+			answer: 0
+		},
+		{
+			question: "Who wrote the book 'To Kill a Mockingbird'?",
+			options: ["J.K. Rowling", "Harper Lee", "Stephenie Meyer", "Suzanne Collins"],
+			answer: 1
 		}
-	}, 2000);
-}
+	];
 
-// Function to handle answer selection
-function answerSelected(answerIndex) {
-	// Increase score if answer is correct
-	if (questions[currentQuestion].answers[answerIndex].correct) {
-		score++;
-	}
-	// Skip to next question
-	timeLeft = 5;
-	skipQuestion();
-	
-}
+	// add event listener to start button
+	startBtn.addEventListener("click", function() {
+		// hide info box and show quiz box
+		infoBox.style.display = "none";
+		quizBox.style.display = "block";
+		
+		// set current question to 0
+		currentQuestion = 0;
 
-// Function to skip to next question
-function skipQuestion() {
-	// Go to next question or end quiz if all questions have been answered
-	if (currentQuestion < questions.length - 1) {
-		currentQuestion++;
-		questionNumber++;
+		// start timer
+		startTimer();
+
+		// display first question
 		displayQuestion();
-		startCountdown();
-	} else {
-		endQuiz();
+	});
+
+	// add event listener to restart button
+	restartBtn.addEventListener("click", function() {
+		// hide result box and show info box
+		resultBox.style.display = "none";
+		infoBox.style.display = "block";
+		
+		// reset score to 0
+		score = 0;
+
+		// reset current question to 0
+		currentQuestion = 0;
+	});
+
+	// function to start timer
+	function startTimer() {
+		timerDisplay.innerText = "5";
+		timerInterval = setInterval(function() {
+			var time = parseInt(timerDisplay.innerText) - 1;
+			timerDisplay.innerText = time.toString();
+
+			// if time runs out, go to next question
+			if (time == 0) {
+				currentQuestion++;
+				if (currentQuestion < questions.length) {
+					displayQuestion();
+				} else {
+					showResults();
+				}
+			}
+		}, 1000);
 	}
 
-	// Reset time if there are no more questions
-	if (currentQuestion >= questions.length) {
-		timeLeft = 5;
-	}
+  function displayQuestion() {
+    // display timer
+    timerDisplay.innerText = "5";
+
+    // display question and options
+    questionDisplay.innerText = questions[currentQuestion].question;
+
+    optionsDisplay.innerHTML = "";
+    for (var i = 0; i < questions[currentQuestion].options.length; i++) {
+        var option = document.createElement("div");
+        option.classList.add("option");
+        option.innerText = questions[currentQuestion].options[i];
+        option.setAttribute("data-option", i);
+        option.addEventListener("click", function() {
+            // check answer
+            checkAnswer(this);
+
+            // go to next question
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                setTimeout(displayQuestion, 500);
+            } else {
+                setTimeout(showResults, 500);
+            }
+        });
+
+        optionsDisplay.appendChild(option);
+    }
 }
 
-// Function to end the quiz and display score
-function endQuiz() {
-	// Hide question container and show score container
-	document.getElementById("question-container").style.display = "none";
-	document.getElementById("score-container").style.display = "block";
-	// Display score
-	document.getElementById("score").textContent = score + "/" + questions.length;
+function checkAnswer(selectedOption) {
+    // get the correct answer for the current question
+    var correctOption = questions[currentQuestion].answer;
+
+    // check if selected option is correct
+    if (selectedOption.getAttribute("data-option") == correctOption) {
+        // add green background and tick icon to selected option
+        selectedOption.classList.add("correct");
+        selectedOption.innerHTML += "<i class='fas fa-check'></i>";
+
+        // increase score
+        score++;
+    } else {
+        // add red background and cross icon to selected option
+        selectedOption.classList.add("wrong");
+        selectedOption.innerHTML += "<i class='fas fa-times'></i>";
+
+        // show the correct answer
+        for (var i = 0; i < optionsDisplay.children.length; i++) {
+            if (optionsDisplay.children[i].getAttribute("data-option") == correctOption) {
+                optionsDisplay.children[i].classList.add("correct");
+                optionsDisplay.children[i].innerHTML += "<i class='fas fa-check'></i>";
+            }
+        }
+    }
+
+    // disable options to prevent multiple selection
+    for (var i = 0; i < optionsDisplay.children.length; i++) {
+        optionsDisplay.children[i].classList.add("disabled");
+    }
 }
 
-// Function to restart the quiz
-function restartQuiz() {
-	// Reset variables
-	currentQuestion = 0;
+
+	// function to show results
+	function showResults() {
+		// stop timer
+	// stop timer
+	clearInterval(timerInterval);
+
+	// hide quiz box and show result box
+	quizBox.style.display = "none";
+	resultBox.style.display = "block";
+
+	// display score
+	scoreDisplay.innerText = "You scored " + score + " out of " + questions.length;
+
+	// reset options display
+	optionsDisplay.innerHTML = "";
+
+	// reset score
 	score = 0;
-	timeLeft = 5;
-	questionNumber = currentQuestion + 1;
-	// Hide score container and show start button
-	document.getElementById("score-container").style.display = "none";
-	document.getElementsByTagName("button")[0].style.display = "block";
+}
+	// stop timer
+	clearInterval(timerInterval);
+
+	// hide quiz box and show result box
+	quizBox.style.display = "none";
+	resultBox.style.display = "block";
+
+	// display score
+	scoreDisplay.innerText = "You scored " + score + " out of " + questions.length;
+
+	// reset options display
+	optionsDisplay.innerHTML = "";
+
+	// reset score
+	score = 0;
 }
 
-// Function to show info box
-function showInfoBox() {
-	document.getElementById("info-box").style.display = "block";
-	document.getElementById("info-box").style.display = "block";
-}
-
-// Function to hide info box
-function hideInfoBox() {
-	document.getElementById("info-box").style.display = "none";
-	document.getElementById("info-box").style.display = "none";
-}
-
-// Function to continue to quiz from info box
-function continueToQuiz() {
-	hideInfoBox();
-	startQuiz();
-	startCountdown();
-	hideInfoBox();
-	startQuiz();
-	startCountdown();
-}
-
-
-// var count = 15;
-// var interval = setInterval(function(){
-//   document.getElementById('count').innerHTML=count;
-//   count--;
-//   if (count === 0){
-//     clearInterval(interval);
-//     document.getElementById('count').innerHTML='Done';
-//     // or...
-//     alert("You're out of time!");
-//   }
-// }, 1000);
