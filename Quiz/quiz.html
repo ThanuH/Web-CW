@@ -1,63 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
 	<title>Quiz</title>
-	<link rel="stylesheet" type="text/css" href="quizstyle.css">
-    <link rel="stylesheet" type="text/css" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="quizstyle.css">
+  <link rel="stylesheet" type="text/css" href="navBar.css">
 </head>
-<body>
-    <nav>
-        <!--checkbox for responsiveness-->
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <!-- <img class="logo" src="Images/logo-no-background.png" alt="logo"> -->
-        <!---menu item-->
-        <ul>
-            <li><a href="../Main_Page/main.html">Home</a></li>
-            <li><a href="../PresentationPage&Shop/Shop/shop.html">Shop</a></li>
-            <li><a href="../QueryForm&Navigation/query_form_and_details/queryForm.html">Query Form</a></li>
-            <li><a href="../AboutUs&Quiz/Quiz/Quiz.html">Quiz</a></li>
-            <li><a href="../Sitemap&Gallery/thumbnail2.html">Show Case</a></li>
-            <li><a href="../Sitemap&Gallery/SiteMap.html" class="selected">Site Map</a></li>
-            <li><a href="../AboutUs&Quiz/AboutUs/aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
+<body >
 
+		<nav>
+            <h2 class="logoText">Music <span>Junkiez</span></h2>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="../Quiz/quiz.html">Quiz</a></li>
+                <li><a href="../Gallery & Sitemap/Gallery.html">Gallery</a></li>
+                <li><a href="../Gallery & Sitemap/SItemap.html">Site Map</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+		
 	<div class="container">
-		<h1>Quiz</h1>
-		<button onclick="startQuiz()">Start</button>
-		<div id="question-container" style="display:none;">
-			<div id="question-number"></div>
-			<div id="question"></div>
+		<div id="infoBox">
+			<h2>Instructions</h2>
+			<ul>
+				<li>Read the question and select an answer.</li>
+				<li>Click the 'Next' button to move to the next question.</li>
+				<li>You can skip a question and come back to it later.</li>
+				<li>After answering all the questions, click the 'Submit' button to see your score.</li>
+			</ul>
+			<button id="startBtn">Start Quiz</button>
+		</div>
+		<div id="quizBox">
 			<div id="timer"></div>
-			<div id="answer-buttons">
-				<button class="btn" onclick="answerSelected(0)"></button>
-				<button class="btn" onclick="answerSelected(1)"></button>
-				<button class="btn" onclick="answerSelected(2)"></button>
-				<button class="btn" onclick="answerSelected(3)"></button>
-			</div>
+			<div id="question"></div>
+			<div id="options"></div>
 		</div>
-		<div id="score-container" style="display:none;">
+		<div id="resultBox">
+			<h2>Results</h2>
 			<div id="score"></div>
-			<button onclick="restartQuiz()">Restart</button>
-		</div>
-		<div id="info-box" style="display:none;">
-			<h2>Welcome to the Quiz!</h2>
-			<p>Answer each question before time runs out.</p>
-			<button onclick="continueToQuiz()">Continue</button>
+			<button id="restartBtn">Restart Quiz</button>
 		</div>
 	</div>
-		<footer> 
-			<div></div>
-			<h1>Page editor</h1>
-		<a id="name" href="../page_editor/page_editor.html">Thanuja Gamage</a>
-		<p>© 2023 Music Junkiez | All Rights Reserved</p>
-		</footer>
 	
-	<script src="quiz.js"></script>
-
+	<script type="text/javascript" src="quiz.js"></script>
 </body>
 </html>
