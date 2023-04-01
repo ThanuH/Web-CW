@@ -47,7 +47,19 @@ function CreateRGB() {
     localStorage.setItem("bg-color", rgbValue);
 }
 
-if (localStorage.getItem(color)) {
-    document.body.style.background = localStorage.getItem(color);
+if (localStorage.getItem("bg-color")) {
+    document.body.style.background = localStorage.getItem("bg-color");
 }
+
+const randomColorBtn = document.querySelector('#btn');
+// clear local storage before generating a new random color
+// localStorage.clear();
+localStorage.clear();
+randomColorBtn.addEventListener('click', function() {
+
+    // generate a new random color
+    const randomColor = CreateRGB();
+    // localStorage.clear();
+
+});
 
