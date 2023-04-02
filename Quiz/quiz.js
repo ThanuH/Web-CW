@@ -19,21 +19,58 @@ window.onload = function() {
 	// define questions
 	var questions = [
 		{
-			question: "What is the capital of France?",
-			options: ["London", "Paris", "Madrid", "Rome"],
+			question: "What is the best-selling album of all time?",
+			options: ["Abbey Road by The Beatles", " Thriller by Michael Jackson", "MadrBack in Black by AC/DC", "Rumours by Fleetwood Mac"],
 			answer: 1
 		},
 		{
-			question: "What is the largest planet in our solar system?",
-			options: ["Jupiter", "Saturn", "Mars", "Venus"],
+			question: "Which music streaming service has the most subscribers worldwide as of 2021?",
+			options: ["Apple Music", "Spotify", "Amazon Musics", "Tidal"],
+			answer: 1
+		},
+		{
+			question: "Who won the Grammy Award for Album of the Year in 2021?",
+			options: ["Taylor Swift - folklore", "Dua Lipa - Future Nostalgia", "Beyoncé - Black Parade", "Billie Eilish - When We All Fall Asleep, Where Do We Go?"],
 			answer: 0
 		},
 		{
-			question: "Who wrote the book 'To Kill a Mockingbird'?",
-			options: ["J.K. Rowling", "Harper Lee", "Stephenie Meyer", "Suzanne Collins"],
+			question: "Which music genre emerged in the African American communities in the United States in the 1970s and became popular worldwide?",
+			options: ["Jazz", "Hip-hop", "Blues", "Rock"],
 			answer: 1
+		},
+		{
+			question: "Which band had a hit in 1982 with the song Eye of the Tiger, which was featured in the movie Rocky III?",
+			options: ["Queen", "Guns N' Roses", "Journey", "Survivor"],
+			answer: 3
+		},
+		{
+			question: "Who is known as the King of Pop?",
+			options: ["Prince", "Michael Jackson", "Elvis Presley", "Stevie Wonder"],
+			answer: 1
+		},
+		{
+			question: "Which music festival in the United States is famous for its flower crowns and celebrity attendees?",
+			options: ["Coachella", "Lollapalooza", "Bonnaroo", "Glastonbury"],
+			answer: 0
+		},
+		{
+			question: "Who founded the music streaming service Tidal in 2014?",
+			options: ["Jay-Z", "Dr. Dre", "Sean Combs", "Kanye West"],
+			answer: 0
+		},
+		{
+			question: "Who released the hit song Shape of You in 2017?",
+			options: ["Ed Sheeran", "Justin Bieber", "Drake", "Shawn Mendes"],
+			answer: 0
+		},
+		{
+			question: "What is the name of the first music video ever played on MTV in 1981?",
+			options: ["Video Killed the Radio Star by The Buggles", "Thriller by Michael Jackson", "Billie Jean by Michael Jackson", "I Want My MTV by Dire Straits"],
+			answer: 0
 		}
 	];
+
+	
 
 	// add event listener to start button
 	startBtn.addEventListener("click", function() {
@@ -84,6 +121,7 @@ window.onload = function() {
 	}
 
   function displayQuestion() {
+	
     // display timer
     timerDisplay.innerText = "5";
 
@@ -111,6 +149,7 @@ window.onload = function() {
 
         optionsDisplay.appendChild(option);
     }
+	document.getElementById("questionNum").innerText = "Question " + (currentQuestion + 1) + " of " + questions.length;
 }
 
 function checkAnswer(selectedOption) {
@@ -164,6 +203,7 @@ function checkAnswer(selectedOption) {
 
 	// reset score
 	score = 0;
+	
 }
 	// stop timer
 	clearInterval(timerInterval);
