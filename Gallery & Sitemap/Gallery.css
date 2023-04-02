@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
 
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',sans-serif;
+}
 .view {
     height: 34.698vw;
     width: 34.698vw;
