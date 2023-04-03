@@ -29,7 +29,8 @@ h1,
 h2 {
   margin-top: 0;
   text-align: center;
-  color: #333;
+  color: #000000;
+  text-decoration: underline;
 }
 
 h2 {
@@ -77,6 +78,15 @@ button:hover {
 #quizBox,
 #resultBox {
   display: none;
+}
+
+#resultBox {
+  width: 400px;
+  height: 300px;
+}
+
+#infoBox ul {
+  font-size: 1.8em; /* adjust the value as needed */
 }
 
 #quizbox {
