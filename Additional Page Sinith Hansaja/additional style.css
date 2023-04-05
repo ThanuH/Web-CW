@@ -7,6 +7,7 @@
 .container {
     min-height: 100vh;
     background-image: url(images/mic.jpg);
+    filter: brightness(0.60);
     background-size: cover;
     padding-right: 0%; 
 }
