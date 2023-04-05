@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+/* hover add */
+.svg_sections {
+    font-family: poppins;
+    font-size: 1.5em;
+}
+
+/* hover add frame */
+.svg_rect {
+    fill: url(#rectangle_color);
+    stroke-width: 0.278vw;
+}
+
+.svg_lines {
+    stroke: rgb(255,255,255);
+    stroke-width: 0.278vw;
+}
+
+.sitemap {
+    fill: rgb(255, 0, 195);
+    font-size: 1.5em;
+    font-family: poppins;
+}
+
+body {
+    background-image: url("images/Sitemap.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    background-color: rgb(161, 161, 161);
+}
+
+h2 {
+    stroke: rgb(255, 0, 0);
+    text-align: center;
+    font-family: poppins;
+}
+
+/* ----------------Text-------------- */
+svg g text {
+    fill: rgb(255, 255, 255);
+    font-weight: 540;
+}   
+
+/* ----------------Rect-------------- */
+svg g rect {
+    stroke: rgb(255, 255,255);
+    stroke-width: 5px; 
+    position: relative;
+}
+
+svg g a:hover rect{    
+    stroke: #FFFACD;
+    animation:1s draw linear forwards;
+    cursor: pointer;
+}
+
+@keyframes draw{
+    0%{
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -400;
+    }
+    100%{
+        stroke-dasharray:760;
+        stroke-dashoffset: 0;
+    }
+}
