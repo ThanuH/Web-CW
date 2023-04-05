@@ -1,118 +1,103 @@
+
 /* Body */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #32383c;
-  margin: 0;
-  padding: 0;
+  background-color: #101e28;
 }
-
 
 /* Container */
 .container {
-  max-width: 800px;
-  /* height: 400px; */
-  /* margin: 0 auto; */
-  padding: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* padding-top: 10px; */
-  border-radius: 10px;
-  background-color: #6eb591;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+    max-width: 800px;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    background-color: #63bcf8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
 }
 
 /* Header */
 h1,
 h2 {
-  margin-top: 0;
-  text-align: center;
-  color: #000000;
-  text-decoration: underline;
+    margin-top: 0;
+    text-align: center;
+    color: #000000;
+    font-size: xx-large;
+    text-decoration: underline;
 }
 
-h2 {
-  font-size: 36px;
-
-}
 
 #questionNum {
 
-  color: #000000;
-  margin-top: 0%;
-  padding-top: 0%;
-  font-size: x-large;
+    color: #000000;
+    margin-top: 0%;
+    padding-top: 0%;
+    font-size: x-large;
 
 
 }
 
 /* Button */
 button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 button:hover {
-  background-color: #3e8e41;
+    background-color: #3e8e41;
 }
 
 #startButton {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* Quiz Boxes */
 #infoBox,
 #quizBox,
 #resultBox {
-  display: none;
-}
-
-#resultBox {
-  width: 400px;
-  height: 300px;
+    display: none;
 }
 
 #infoBox ul {
-  font-size: 1.8em; /* adjust the value as needed */
-}
-
+    font-size: 1.5em; /* adjust the value as needed */
+  }
 #quizbox {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Timer */
 #timer {
-  /* padding: 0 10px; */
+    /* padding: 0 10px; */
 
-  /* padding-left: 100px; */
-  /* padding-right: 100px; */
-  margin-left: 600px;
-  border-radius: 5px;
-  /* align-items: center; */
-  height: 30px;
-  width: 30px;
-  color: #fff;
-  border-radius: 5px;
-  line-height: 30px;
-  text-align: center;
-  background: #2e3a47;
-  border: 1px solid #343a40;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    margin-left: 600px;
+    border-radius: 5px;
+    /* align-items: center; */
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #2e3a47;
+    border: 1px solid #343a40;
 }
 
 /* #questionNum{
@@ -121,102 +106,102 @@ font-size: medium;
 
 } */
 .header {
-  position: relative;
-  padding-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 #timer {
-  position: relative;
-  top: 0;
-  left: 0;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 #questionNum {
-  position: absolute;
-  margin-left: 0px;
-  left: 0;
-  top: 0;
-  right: 0;
+    position: absolute;
+    margin-left: 0px;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
-#header .questionNum {
+/* #header .questionNum {
 
-  color: blue;
-}
+    color: blue;
+} */
 
 /* Question */
 #question {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
 }
 
 /* Options */
 .option {
-  transition: transform 0.2s ease-in-out;
-  display: block;
-  margin: 0 auto 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
 }
 
 .option:hover {
-  background-color: #f2f2f2;
-  transform: translateY(-3px);
+    background-color: #f2f2f2;
+    transform: translateY(-3px);
 }
 
 .selected {
-  background-color: #4CAF50;
-  color: #fff;
+    background-color: #4CAF50;
+    color: #fff;
 }
 
 /* Score */
 #score {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 /* Correct Options */
 .correct {
-  background-color: #a6f3a6 !important;
-  color: #3e9333 !important;
+    background-color: #a6f3a6 !important;
+    color: #3e9333 !important;
 }
 
 .correct i {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 /* Wrong Options */
 .wrong {
-  background-color: #ffb4b4 !important;
-  color: #f44336 !important;
+    background-color: #ffb4b4 !important;
+    color: #f44336 !important;
 }
 
 .wrong i {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 @media screen and (max-width: 600px) {
-  .container {
-      max-width: 100%;
-      padding: 10px;
-  }
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-  h1 {
-      font-size: 36px;
-  }
+    h1 {
+        font-size: 36px;
+    }
 
-  h2 {
-      font-size: 24px;
-  }
+    h2 {
+        font-size: 24px;
+    }
 }

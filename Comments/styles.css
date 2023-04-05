@@ -1,7 +1,13 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
 body {
-    background: linear-gradient(to bottom right, #5f2c82, #49a09d);
+    background: linear-gradient(rgb(31, 31, 31),#000000fd);
     color: rgb(0, 0, 0);
-    font-family: poppins;
 }
 /* Style for form container */
 .form-container {

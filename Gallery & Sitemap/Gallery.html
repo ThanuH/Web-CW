@@ -4,33 +4,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery</title>
         <link rel="stylesheet" href="Gallery.css">
-        <!-- <link rel="stylesheet" href="nav.css"> -->
         <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="../Main Page/navBar.css">
+        <link rel="stylesheet" href="../Main Page/footer.css">
     </head>
     <body>
      <!--navigation bar starts-->
         <nav>
             <h2 class="logoText">Music <span>Junkiez</span></h2>
             <ul>
-                <li><a href="../Main Page/mainPageDraft.html" >Home</a></li>
-                <li><a href="#">Comments</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="../Main Page/mainPage.html" >Home</a></li>
+                <li><a href="../Comments/comments.html">Comments</a></li>
+                <li><a href="../Store/Shop/shop.html">Shop</a></li>
                 <li><a href="../Quiz/quiz.html">Quiz</a></li>
                 <li><a href="../Gallery & Sitemap/Gallery.html" class="active">Gallery</a></li>
                 <li><a href="../Gallery & Sitemap/SItemap.html">Site Map</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="../Student Info/aboutUs.html">About us</a></li>
             </ul>
         </nav>
     <form>
         <span style="font-family: poppins;font-size:1.2em;">
      <!-- Background -->
             <select style="font-family:poppins; border-radius:20px; color:white;background-color:black;" onchange="pagecolor(this.value)">
+                <option value="">Select a color</option>
                 <option  value="">By Default</option>
                 <option value="black">Black</option>
                 <option value="#fff">White</option>
-                 <option value="#75bff0">Blue</option>
-                 <option value="#cea9cf">Pink</option>
+                <option value="#75bff0">Blue</option>
+                <option value="#cea9cf">Pink</option>
             </select>
     <!-- Random Button -->
             <button id="btn" onclick="CreateRGB()">Random</button> 
@@ -66,9 +67,12 @@
                 <img id="5" class="gallery image" src="images/image5.jpeg" onmouseover="view(this)" onmouseenter="description_Adele_21()" />
              </div>
              <footer>
-                <h2>Page Editor</h2>
-                <a id="name" href="Shanuka_Pageeditor.html">Shanuka Himsara</a>
-                <p>©2023 Ghetto Play | All Rights Reserved</p>
+                <div class="footer-content">
+                    <h2 class="logoText">Music <span>Junkiez</span></h2>
+                    <p>Music Junkiez is an online music store with a wide selection of genres, including pop, rock, hip-hop, and classical. It also sells music-related merchandise and offers competitive prices and fast shipping.</p>
+                    <p> Developer :- <a href="#">Shanuka Himsara</a></p>
+                    <p>copyright &copy;</p>
+                  </div>
             </footer>
         <script type="text/javascript" src="Gallery.js"></script>
     </body>
