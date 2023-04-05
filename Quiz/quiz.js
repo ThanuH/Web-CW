@@ -195,38 +195,37 @@ window.onload = function () {
 
 
 	// function to show results
-	function showResults() {
-		// stop timer
-		clearInterval(timerInterval);
+function showResults() {
+    // stop timer
+    clearInterval(timerInterval);
 
-		// hide quiz box and show result box
-		quizBox.style.display = "none";
-		resultBox.style.display = "block";
+    // hide quiz box and show result box
+    quizBox.style.display = "none";
+    resultBox.style.display = "block";
 
-		// display score
-		scoreDisplay.innerText = "You scored " + score + " out of " + questions.length + ". " + displayMessage();
+    // display score
+    scoreDisplay.innerHTML = displayMessage();
 
-		// reset options display
-		optionsDisplay.innerHTML = "";
+    // reset options display
+    optionsDisplay.innerHTML = "";
 
-		// reset score
-		score = 0;
-	}
-
-	// stop timer
-	clearInterval(timerInterval);
-
-	// hide quiz box and show result box
-	quizBox.style.display = "none";
-	resultBox.style.display = "block";
-
-	// display score
-	scoreDisplay.innerText = "You scored " + score + " out of " + questions.length;
-
-	// reset options display
-	optionsDisplay.innerHTML = "";
-
-	// reset score
-	score = 0;
+    // reset score
+    score = 0;
 }
 
+// display info box
+infoBox.style.display = "block";
+
+// stop timer
+clearInterval(timerInterval);
+
+// hide quiz box and show result box
+quizBox.style.display = "none";
+resultBox.style.display = "none";
+
+// reset options display
+optionsDisplay.innerHTML = "";
+
+// reset score
+score = 0;
+}
