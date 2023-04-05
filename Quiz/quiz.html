@@ -1,55 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Quiz</title>
-  <link rel="stylesheet" type="text/css" href="quizstyle.css">
-  <link rel="stylesheet" type="text/css" href="navBar.css">
+	<link rel="stylesheet" type="text/css" href="quizstyle.css">
+	<link rel="stylesheet" type="text/css" href="navBar.css">
 </head>
-<body >
+<body>
+	<nav>
+		<h2 class="logoText">Music <span>Junkiez</span></h2>
+		<ul>
+            <li><a href="../Main Page/mainPage.html">Home</a></li>
+            <li><a href="./comments.html" class="active">Comments</a></li>
+            <li><a href="../Store/Shop/shop.html">Shop</a></li>
+            <li><a href="../Quiz/quiz.html">Quiz</a></li>
+            <li><a href="../Gallery & Sitemap/Gallery.html">Gallery</a></li>
+            <li><a href="../Gallery & Sitemap/SItemap.html">Site Map</a></li>
+            <li><a href="../Student Info/aboutUs.html">About us</a></li>
+        </ul>
+	</nav>
 
-		<nav>
-            <h2 class="logoText">Music <span>Junkiez</span></h2>
-            <ul>
-                <li><a href="../Main Page/mainPage.html">Home</a></li>
-                <li><a href="../Comments/comments.html">Comments</a></li>
-                <li><a href="../Store/Shop/shop.html">Shop</a></li>
-                <li><a href="../Quiz/quiz.html"  class="active">Quiz</a></li>
-                <li><a href="../Gallery & Sitemap/Gallery.html">Gallery</a></li>
-                <li><a href="../Gallery & Sitemap/SItemap.html">Site Map</a></li>
-                <li><a href="../Student Info/aboutUs.html">About us</a></li>
-            </ul>
-        </nav>
-		
 	<div class="container">
 		<div id="infoBox">
 			<h2>Instructions</h2>
 			<ul>
 				<li>Read the question and select an answer.</li>
 				<li>There are 10 questions in the quiz.</li>
-				<li>Every question has 4 options select the correct the answer.</li>
 				<li>Each question has 5s to answer.</li>
+				<li>Every question has 4 options select the correct the answer.</li>
 			</ul>
 			<button id="startBtn">Start Quiz</button>
 		</div>
 		<div id="quizBox">
 			<div class="header">
-			<div id="timer">
+				<div id="timer"></div>
+				<div id="questionNum"></div>
 			</div>
-			<div id="questionNum"></div>
-			</div>
-			
+
 			<div id="question"></div>
 			<div id="options"></div>
 		</div>
-		
+
 		<div id="resultBox">
 			<h2>Results</h2>
 			<div id="score"></div>
 			<button id="restartBtn">Restart Quiz</button>
 		</div>
 	</div>
-	
-	
 	<script type="text/javascript" src="quiz.js"></script>
 </body>
+
 </html>
+
+
