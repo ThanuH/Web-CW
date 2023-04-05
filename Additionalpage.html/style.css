@@ -1,17 +1,16 @@
-
 /* Style the header and navigation */
 
 header {
-  background-color: #f2f2f2;
+  background: linear-gradient(to bottom, #a8a8a8, #fff);
   padding: 20px;
   text-align: center;
   font-size: larger;
 }
+
 #introduction {
   background-color: #f7f7f7;
   padding: 50px;
 }
-
 
 #introduction p {
   font-size: 1rem;
@@ -44,13 +43,11 @@ header {
     line-height: 1.5;
     margin-bottom: 30px;
     grid-column: 1 / -1;
-
   }
 
   #introduction p:last-child {
     margin-bottom: 0;
   }
-  
 }
 
 #albums {
@@ -64,7 +61,6 @@ header {
   font-size: 28px;
   margin-bottom: 20px;
   text-decoration: underline;
-
 }
 
 #FamousClassical {
@@ -76,7 +72,6 @@ header {
   color: #333;
   font-size: 35px;
   margin-bottom: 15px;
-
 }
 
 #albums ul {
@@ -99,7 +94,6 @@ header {
 
 #albums a:hover {
   color: #0051a8;
-
 }
 
 /* Style the musician section */
@@ -120,46 +114,35 @@ section#musicians {
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
-}
-/*#musician2 h2{
-  text-align: center;
-}*/
-
-.musician:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
+.musician::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0051a8;
+  transition: height 0.2s ease-in-out;
+}
+
+.musician:hover::before {
+  height: 4px;
+}
 
 .musician img {
   width: 80%;
   border-radius: 10px;
   margin-bottom: -10px;
   filter: grayscale(50%);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
   
-}
-
-.musician img:hover {
+  .musician img:hover {
   filter: grayscale(0%);
-}
-
-.musician h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-#musicians{
-  text-align: center;
-}
-#musicians h2{
-  font-size: 30px;
-  margin-bottom: 10px;
-  padding: 20px;
-  text-align: center;
-
-}
-.musician p {
-  font-size: 16px;
-  line-height:1.5;
-  text-align:justify;
-  padding: 6px;
-}
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
