@@ -54,7 +54,6 @@ p5 {
     color: white;
     padding-left: 675px;
     font-size: 1.8em;
-    font-weight: 6.94vw;
 }
 
 body {
@@ -67,7 +66,7 @@ body {
     position: relative;
     display: inline-flex;
     justify-content: left;
-    align-items: left;
+    align-items:normal;
     width: 13.879vw;
     flex-direction: column;
     margin: 0.069vw auto;
@@ -77,7 +76,7 @@ body {
 .container .buttons {
     width: 100%;
     display: flex;
-    justify-content: flex;
+    justify-content:normal;
     align-items: flex-end;
     margin-bottom: 1.249vw;
 }
