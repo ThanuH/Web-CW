@@ -1,9 +1,9 @@
-window.onload = function() {
+window.onload = function () {
 	// get HTML elements
 	var infoBox = document.getElementById("infoBox");
 	var quizBox = document.getElementById("quizBox");
 	var resultBox = document.getElementById("resultBox");
-  var timerDisplay = document.getElementById("timer");
+	var timerDisplay = document.getElementById("timer");
 	var questionDisplay = document.getElementById("question");
 	var optionsDisplay = document.getElementById("options");
 	var scoreDisplay = document.getElementById("score");
@@ -70,14 +70,14 @@ window.onload = function() {
 		}
 	];
 
-	
+
 
 	// add event listener to start button
-	startBtn.addEventListener("click", function() {
+	startBtn.addEventListener("click", function () {
 		// hide info box and show quiz box
 		infoBox.style.display = "none";
 		quizBox.style.display = "block";
-		
+
 		// set current question to 0
 		currentQuestion = 0;
 
@@ -89,11 +89,11 @@ window.onload = function() {
 	});
 
 	// add event listener to restart button
-	restartBtn.addEventListener("click", function() {
+	restartBtn.addEventListener("click", function () {
 		// hide result box and show info box
 		resultBox.style.display = "none";
 		infoBox.style.display = "block";
-		
+
 		// reset score to 0
 		score = 0;
 
@@ -104,7 +104,7 @@ window.onload = function() {
 	// function to start timer
 	function startTimer() {
 		timerDisplay.innerText = "5";
-		timerInterval = setInterval(function() {
+		timerInterval = setInterval(function () {
 			var time = parseInt(timerDisplay.innerText) - 1;
 			timerDisplay.innerText = time.toString();
 
@@ -120,105 +120,112 @@ window.onload = function() {
 		}, 1000);
 	}
 
-  function displayQuestion() {
-	
-    // display timer
-    timerDisplay.innerText = "5";
+	function displayQuestion() {
 
-    // display question and options
-    questionDisplay.innerText = questions[currentQuestion].question;
+		// display timer
+		timerDisplay.innerText = "5";
 
-    optionsDisplay.innerHTML = "";
-    for (var i = 0; i < questions[currentQuestion].options.length; i++) {
-        var option = document.createElement("div");
-        option.classList.add("option");
-        option.innerText = questions[currentQuestion].options[i];
-        option.setAttribute("data-option", i);
-        option.addEventListener("click", function() {
-            // check answer
-            checkAnswer(this);
+		// display question and options
+		questionDisplay.innerText = questions[currentQuestion].question;
 
-            // go to next question
-            currentQuestion++;
-            if (currentQuestion < questions.length) {
-                setTimeout(displayQuestion, 500);
-            } else {
-                setTimeout(showResults, 500);
-            }
-        });
+		optionsDisplay.innerHTML = "";
+		for (var i = 0; i < questions[currentQuestion].options.length; i++) {
+			var option = document.createElement("div");
+			option.classList.add("option");
+			option.innerText = questions[currentQuestion].options[i];
+			option.setAttribute("data-option", i);
+			option.addEventListener("click", function () {
+				// check answer
+				checkAnswer(this);
 
-        optionsDisplay.appendChild(option);
-    }
-	document.getElementById("questionNum").innerText = "Question " + (currentQuestion + 1) + " of " + questions.length;
-}
+				// go to next question
+				currentQuestion++;
+				if (currentQuestion < questions.length) {
+					setTimeout(displayQuestion, 500);
+				} else {
+					setTimeout(showResults, 500);
+				}
+			});
 
-function checkAnswer(selectedOption) {
-    // get the correct answer for the current question
-    var correctOption = questions[currentQuestion].answer;
+			optionsDisplay.appendChild(option);
+		}
+		document.getElementById("questionNum").innerText = "Question " + (currentQuestion + 1) + " of " + questions.length;
+	}
 
-    // check if selected option is correct
-    if (selectedOption.getAttribute("data-option") == correctOption) {
-        // add green background and tick icon to selected option
-        selectedOption.classList.add("correct");
-        selectedOption.innerHTML += "<i class='fas fa-check'></i>";
+	function checkAnswer(selectedOption) {
+		// get the correct answer for the current question
+		var correctOption = questions[currentQuestion].answer;
 
-        // increase score
-        score++;
-    } else {
-        // add red background and cross icon to selected option
-        selectedOption.classList.add("wrong");
-        selectedOption.innerHTML += "<i class='fas fa-times'></i>";
+		// check if selected option is correct
+		if (selectedOption.getAttribute("data-option") == correctOption) {
+			// add green background and tick icon to selected option
+			selectedOption.classList.add("correct");
+			selectedOption.innerHTML += "<i class='fas fa-check'></i>";
 
-        // show the correct answer
-        for (var i = 0; i < optionsDisplay.children.length; i++) {
-            if (optionsDisplay.children[i].getAttribute("data-option") == correctOption) {
-                optionsDisplay.children[i].classList.add("correct");
-                optionsDisplay.children[i].innerHTML += "<i class='fas fa-check'></i>";
-            }
-        }
-    }
+			// increase score
+			score++;
+		} else {
+			// add red background and cross icon to selected option
+			selectedOption.classList.add("wrong");
+			selectedOption.innerHTML += "<i class='fas fa-times'></i>";
 
-    // disable options to prevent multiple selection
-    for (var i = 0; i < optionsDisplay.children.length; i++) {
-        optionsDisplay.children[i].classList.add("disabled");
-    }
-}
+			// show the correct answer
+			for (var i = 0; i < optionsDisplay.children.length; i++) {
+				if (optionsDisplay.children[i].getAttribute("data-option") == correctOption) {
+					optionsDisplay.children[i].classList.add("correct");
+					optionsDisplay.children[i].innerHTML += "<i class='fas fa-check'></i>";
+				}
+			}
+		}
+
+		// disable options to prevent multiple selection
+		for (var i = 0; i < optionsDisplay.children.length; i++) {
+			optionsDisplay.children[i].classList.add("disabled");
+		}
+	}
+	function displayMessage() {
+		if (score == questions.length) {
+			return "Congratulations! You got a perfect score!";
+		} else if (score >= questions.length / 2) {
+			return "Well done! You got " + score + " out of " + questions.length + " correct.";
+		} else {
+			return "Better luck next time. You got " + score + " out of " + questions.length + " correct.";
+		}
+	}
 
 
 	// function to show results
-	function showResults() {
-		// stop timer
-	// stop timer
-	clearInterval(timerInterval);
+function showResults() {
+    // stop timer
+    clearInterval(timerInterval);
 
-	// hide quiz box and show result box
-	quizBox.style.display = "none";
-	resultBox.style.display = "block";
+    // hide quiz box and show result box
+    quizBox.style.display = "none";
+    resultBox.style.display = "block";
 
-	// display score
-	scoreDisplay.innerText = "You scored " + score + " out of " + questions.length;
+    // display score
+    scoreDisplay.innerHTML = displayMessage();
 
-	// reset options display
-	optionsDisplay.innerHTML = "";
+    // reset options display
+    optionsDisplay.innerHTML = "";
 
-	// reset score
-	score = 0;
-	
-}
-	// stop timer
-	clearInterval(timerInterval);
-
-	// hide quiz box and show result box
-	quizBox.style.display = "none";
-	resultBox.style.display = "block";
-
-	// display score
-	scoreDisplay.innerText = "You scored " + score + " out of " + questions.length;
-
-	// reset options display
-	optionsDisplay.innerHTML = "";
-
-	// reset score
-	score = 0;
+    // reset score
+    score = 0;
 }
 
+// display info box
+infoBox.style.display = "block";
+
+// stop timer
+clearInterval(timerInterval);
+
+// hide quiz box and show result box
+quizBox.style.display = "none";
+resultBox.style.display = "none";
+
+// reset options display
+optionsDisplay.innerHTML = "";
+
+// reset score
+score = 0;
+}
