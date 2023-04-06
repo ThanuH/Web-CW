@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery</title>
@@ -23,7 +23,6 @@
             </ul>
         </nav>
     <form>
-        <span style="font-family: poppins;font-size:1.2em;">
      <!-- Background -->
             <select style="font-family:poppins; border-radius:20px; color:white;background-color:black;" onchange="pagecolor(this.value)">
                 <option value="">Select a color</option>
@@ -43,10 +42,9 @@
                             <span class="btn" onclick="document.getElementById('zoom in').style.fontSize='2em'">A</span>
                         </div>
                  </div>
-        </span>
     </form>
      <!-- Gallery Starts  -->
-            <div id="zoom in">
+            <div id="zoomin">
                 <img id="0" class="view" src="images/image1.jpg"><br>
                 <span id="description">Pain<br><p1>Pain (typeset as PAIN) is a musical project from Sweden that mixes heavy metal with 
                                 influences from electronic music and techno. The project started out as a hobby project for frontman Peter Tägtgren, whose idea was 
@@ -56,15 +54,15 @@
             </div>
     <br><br>
             <div id="all_gallery_photos">
-                 <img id="1" class="gallery image active" src="images/image1.jpg" onmouseover="view(this)" onmouseenter="description_Pain()" />
+                 <img id="1" class="gallery image active" src="images/image1.jpg" alt="image1" onmouseover="view(this)" onmouseenter="description_Pain()" />
 
-                <img id="2" class="gallery image" src="images/image2.jpg" onmouseover="view(this)" onmouseenter="description_Celestial()" />
+                <img id="2" class="gallery image" src="images/image2.jpg" alt="image2" onmouseover="view(this)" onmouseenter="description_Celestial()" />
 
-                <img id="3" class="gallery image" src="images/image3.jpg" onmouseover="view(this)" onmouseenter="description_Ophelia()" />
+                <img id="3" class="gallery image" src="images/image3.jpg" alt="image3" onmouseover="view(this)" onmouseenter="description_Ophelia()" />
 
-                <img id="4" class="gallery image" src="images/image4.jpg" onmouseover="view(this)" onmouseenter="description_Havana()" />
+                <img id="4" class="gallery image" src="images/image4.jpg" alt="image4" onmouseover="view(this)" onmouseenter="description_Havana()" />
 
-                <img id="5" class="gallery image" src="images/image5.jpeg" onmouseover="view(this)" onmouseenter="description_Adele_21()" />
+                <img id="5" class="gallery image" src="images/image5.jpeg" alt="image5" onmouseover="view(this)" onmouseenter="description_Adele_21()" />
              </div>
              <footer>
                 <div class="footer-content">
