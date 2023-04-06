@@ -49,3 +49,7 @@ li  a::after {
     width: 100%;
     background: #ea1538;
   }
+
+  a{
+    text-decoration: none;
+  }

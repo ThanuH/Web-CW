@@ -14,7 +14,18 @@ body
 {
     background: linear-gradient(rgb(31, 31, 31),#000000fd);
 }
-
+.logoText{
+    color: white;
+    font-size: 1.843vw;
+}
+.logoText span{
+    color: #ea1538;
+}
+.subject h2{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
 .products
 {
     position: relative;
