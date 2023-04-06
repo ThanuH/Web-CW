@@ -12,6 +12,15 @@
 </head>
 
 <body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <script>
+      $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut(2500);
+      });
+  </script>
     <div class="hero">
         <nav>
             <h2 class="logoText">Music <span>Junkiez</span></h2>
