@@ -3,12 +3,45 @@
     padding: 0;
     font-family: sans-serif;
 }
+body{
+    background-image: linear-gradient(140deg, #360033 0%, #0b8793 50%);
+}
 
+.info h2{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    width: 950px;
+    line-height: 25px;
+}
+
+.artist h3{
+    font-size: 25px;
+    padding-bottom: 2rem;
+}
+.music h3{
+    font-size: 25px;
+    padding-bottom: 2rem;
+}
+
+.music h4{
+    font-size: 20px;
+    padding-bottom: 2rem;
+}
+
+.music li,p{
+    font-size: 14px;
+    /* padding-bottom: 2rem; */
+    color: white;
+}
 .container {
     min-height: 100vh;
-    background-image: url(images/mic.jpg);
     background-size: cover;
     padding-right: 0%; 
+}
+a{
+    text-decoration: none;
 }
 
 .row {
@@ -24,7 +57,7 @@
 h1 {
     text-align: justify;
     padding-top: 50px;
-    color: darkgoldenrod;
+    color: rgb(247, 247, 247);
     font-size: 50px;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
@@ -53,7 +86,7 @@ h3{
 
 h4{
     padding-top: 40px;
-    padding-left: 70px;
+    /* padding-left: 70px; */
     color: white;
     font-size: 17px;
     /* font-family: 'Times New Roman', Times, serif; */
@@ -61,19 +94,6 @@ h4{
     width: 950px;
     line-height: 25px;
 }
-
-/* h4{
-    color: #a2ff00;
-    font-weight: normal;
-} */
-
-
-/* .history{
-    padding-top: 40px;
-    padding-left: 70px;
-    color: white;
-    font-size: 17px;
-} */
 
 p {
     color: white;
@@ -84,7 +104,7 @@ p {
 .card {
     width: 300px;
     height: 360px;
-    display: inline-block;
+    display: flex;
     border-radius: 10px;
     padding: 18px 25px;
     box-sizing: content-box;
@@ -150,6 +170,65 @@ p {
     transform: translateY(-5%);
 }
 
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.logoText{
+    color: white;
+    font-size: 1.843vw;
+}
+span{
+    color: #ea1538;
+}
+
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-content p a{
+  color:#ffffff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+  
 
 
 
