@@ -8,6 +8,11 @@
 body{
     font-family: poppins;
 }
+
+u{
+    text-decoration: none;
+}
+
 .about-wrapper{
     height: 100vh;
 }
