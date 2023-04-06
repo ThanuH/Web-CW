@@ -198,6 +198,15 @@
             
         </div>
         <div id="overlay"></div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+        <footer>
+            <div class="footer-content">
+                <h2 class="logoText">Music <span>Junkiez</span></h2>
+                <p>Music Junkiez is an online music store with a wide selection of genres, including pop, rock, hip-hop, and classical. It also sells music-related merchandise and offers competitive prices and fast shipping.</p>
+                <p> Developer :- <a href="./../../Page Editors/Student 1/sinith_pageEditor.html">Sinith Hansaja</a></p>
+                <p>copyright &copy;</p>
+              </div>
+        </footer>
 
 <!--End Of User Input Section-->
 
@@ -249,16 +258,28 @@
                         model.classList.remove("active")
                         overlay.classList.remove("active")
                     } 
+
+                    let mybutton = document.getElementById("myBtn");
+
+
+                    window.onscroll = function() {scrollFunction()};
+
+                    function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                    }
+
+
+                    function topFunction() {
+                    document.body.scrollTop = 0; 
+                    document.documentElement.scrollTop = 0; 
+                    }
+
         </script>
-        
-        <footer>
-            <div class="footer-content">
-                <h2 class="logoText">Music <span>Junkiez</span></h2>
-                <p>Music Junkiez is an online music store with a wide selection of genres, including pop, rock, hip-hop, and classical. It also sells music-related merchandise and offers competitive prices and fast shipping.</p>
-                <p> Developer :- <a href="./../../Page Editors/Student 1/sinith_pageEditor.html">Sinith Hansaja</a></p>
-                <p>copyright &copy;</p>
-              </div>
-        </footer>
+       
         
     </body>
 </html>
